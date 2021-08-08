@@ -33,3 +33,9 @@
  inhibit-startup-message t         ; Don't show the startup message
  inhibit-startup-screen t          ; or screen
 )
+
+(global-set-key (kbd "s-<right>") 'end-of-visual-line)
+(global-set-key (kbd "s-<left>") 'beginning-of-visual-line)
+(global-set-key (kbd "s-<up>") 'beginning-of-buffer)
+(global-set-key (kbd "s-<down>") 'end-of-buffer)
+(global-set-key (kbd "s-l") 'goto-line)
