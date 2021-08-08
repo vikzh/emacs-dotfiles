@@ -4,3 +4,4 @@
 (blink-cursor-mode -1)
 ;; makes sure the contents of the buffer is refreshed automatically when the file is changed outside of Emacs
 (global-auto-revert-mode t)
+(load-theme 'tsdh-light)
