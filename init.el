@@ -39,3 +39,26 @@
 (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "s-<down>") 'end-of-buffer)
 (global-set-key (kbd "s-l") 'goto-line)
+
+
+;; Many commands in Emacs write the current position into mark ring.
+;; These custom functions allow for quick movement backward and forward.
+;; For example, if you were editing line 6, then did a search with Cmd+f, did something and want to come back,
+;; press Cmd+, to go back to line 6. Cmd+. to go forward.
+;; These keys are chosen because they are the same buttons as < and >, think of them as arrows.
+(defun my-pop-local-mark-ring ()
+  (interactive)
+  (set-mark-command t))
+
+(defun unpop-to-mark-command ()
+  "Unpop off mark ring. Does nothing if mark ring is empty."
+  (interactive)
+      (when mark-ring
+        (setq mark-ring (cons (copy-marker (mark-marker)) mark-ring))
+        (set-marker (mark-marker) (car (last mark-ring)) (current-buffer))
+        (when (null (mark t)) (ding))
+        (setq mark-ring (nbutlast mark-ring))
+        (goto-char (marker-position (car (last mark-ring))))))
+
+(global-set-key (kbd "s-,") 'my-pop-local-mark-ring)
+(global-set-key (kbd "s-.") 'unpop-to-mark-command)
