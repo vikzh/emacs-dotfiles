@@ -38,6 +38,8 @@
 (global-set-key (kbd "s-<left>") 'beginning-of-visual-line)
 (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "s-<down>") 'end-of-buffer)
+(global-set-key (kbd "M-<down>") 'forward-sentence)
+(global-set-key (kbd "M-<up>") 'backward-sentence)
 (global-set-key (kbd "s-l") 'goto-line)
 
 
@@ -62,3 +64,6 @@
 
 (global-set-key (kbd "s-,") 'my-pop-local-mark-ring)
 (global-set-key (kbd "s-.") 'unpop-to-mark-command)
+
+(when (not window-system)
+  (message "i am in terminal"))
