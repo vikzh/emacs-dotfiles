@@ -11,6 +11,10 @@
 (global-auto-revert-mode t)
 (load-theme 'tsdh-light)
 
+;; disable auto save and backups
+(setq auto-save-default nil)
+(setq make-backup-files nil)
+
 ;; C - Control
 ;; Super - Command
 ;; Meta - Option
