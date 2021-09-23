@@ -31,6 +31,7 @@
    ;;mac-right-option-modifier 'nil
    ))
 
+(global-set-key (kbd "C-s-f") 'toggle-frame-fullscreen)
 
 (global-set-key (kbd "s-=") 'text-scale-increase)
 (global-set-key (kbd "s--") 'text-scale-decrease)
