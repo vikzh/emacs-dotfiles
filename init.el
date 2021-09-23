@@ -83,6 +83,9 @@
 (global-set-key (kbd "s-0") (kbd "C-x 0"))  ;; Cmd-0...
 (global-set-key (kbd "s-w") (kbd "C-x 0"))  ;; ...and Cmd-w to close current window
 
+;;other window
+(global-set-key (kbd "M-o") 'other-window)
+
 ;; =================
 ;; Package makagement
 (when (not window-system)
