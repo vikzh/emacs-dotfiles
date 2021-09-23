@@ -15,6 +15,9 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+;; Move file to trash instead of removing.
+(setq-default delete-by-moving-to-trash t)
+
 ;; C - Control
 ;; Super - Command
 ;; Meta - Option
