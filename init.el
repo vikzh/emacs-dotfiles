@@ -72,5 +72,18 @@
 (global-set-key (kbd "s-,") 'my-pop-local-mark-ring)
 (global-set-key (kbd "s-.") 'unpop-to-mark-command)
 
+
+;; =================
+;; WINDOW MANAGEMENT
+
+;; Go to other windows easily with Cmd
+(global-set-key (kbd "s-1") (kbd "C-x 1"))  ;; Cmd-1 kill other windows (keep 1)
+(global-set-key (kbd "s-2") (kbd "C-x 2"))  ;; Cmd-2 split horizontally
+(global-set-key (kbd "s-3") (kbd "C-x 3"))  ;; Cmd-3 split vertically
+(global-set-key (kbd "s-0") (kbd "C-x 0"))  ;; Cmd-0...
+(global-set-key (kbd "s-w") (kbd "C-x 0"))  ;; ...and Cmd-w to close current window
+
+;; =================
+;; Package makagement
 (when (not window-system)
   (message "i am in terminal"))
