@@ -117,4 +117,19 @@
     :ensure t
     :init
     (which-key-mode))
+
+  ;; Move between windows with Control-Command-Arrow and with =Cmd= just like in iTerm.
+  (use-package windmove
+    :config
+    (global-set-key (kbd "<C-s-left>")  'windmove-left)  ;; Ctrl+Cmd+left go to left window
+    (global-set-key (kbd "s-[")  'windmove-left)         ;; Cmd+[ go to left window
+
+    (global-set-key (kbd "<C-s-right>") 'windmove-right) ;; Ctrl+Cmd+right go to right window
+    (global-set-key (kbd "s-]")  'windmove-right)        ;; Cmd+] go to right window
+
+    (global-set-key (kbd "<C-s-up>")    'windmove-up)    ;; Ctrl+Cmd+up go to upper window
+    (global-set-key (kbd "s-{")  'windmove-up)           ;; Cmd+Shift+[ go to upper window
+
+    (global-set-key (kbd "<C-s-down>")  'windmove-down)  ;; Ctrl+Cmd+down go to down window
+    (global-set-key (kbd "s-}")  'windmove-down))        ;; Cmd+Shift+] got to down window
   )
