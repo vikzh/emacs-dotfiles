@@ -89,5 +89,26 @@
 
 ;; =================
 ;; Package makagement
-(when (not window-system)
-  (message "i am in terminal"))
+(when window-system
+  (message "i am in GUI")
+  (require 'package)
+  (add-to-list
+   'package-archives
+   '("melpa" . "https://melpa.org/packages/")
+   t)
+
+  (package-initialize)
+
+
+  ;;'use-package' to install and configure packages.
+  (unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+    (package-install 'use-package))
+  (eval-when-compile (require 'use-package))
+
+  ;; For learning Emacs, shows a table of possible commands.
+  (use-package which-key
+    :ensure t
+    :init
+    (which-key-mode))
+  )
