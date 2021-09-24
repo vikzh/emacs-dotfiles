@@ -73,6 +73,12 @@
 (global-set-key (kbd "s-,") 'my-pop-local-mark-ring)
 (global-set-key (kbd "s-.") 'unpop-to-mark-command)
 
+;; ============
+;; TEXT EDITING
+
+;; Comment line or region.
+(global-set-key (kbd "s-/") 'comment-line)
+
 
 ;; =================
 ;; WINDOW MANAGEMENT
