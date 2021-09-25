@@ -139,4 +139,11 @@
 
     (global-set-key (kbd "<C-s-down>")  'windmove-down)  ;; Ctrl+Cmd+down go to down window
     (global-set-key (kbd "s-}")  'windmove-down))        ;; Cmd+Shift+] got to down window
+
+  (use-package doom-modeline
+    :ensure t
+    :init (doom-modeline-mode 1))
+
+  (setq doom-modeline-buffer-encoding t)
+  (setq doom-modeline-indent-info t)
   )
