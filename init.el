@@ -51,6 +51,9 @@
 (global-set-key (kbd "s-l") 'goto-line)
 
 
+(global-set-key (kbd "M-n") 'backward-sexp)
+(global-set-key (kbd "M-i") 'forward-sexp)
+
 ;; Many commands in Emacs write the current position into mark ring.
 ;; These custom functions allow for quick movement backward and forward.
 ;; For example, if you were editing line 6, then did a search with Cmd+f, did something and want to come back,
