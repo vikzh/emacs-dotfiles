@@ -147,3 +147,7 @@
   (setq doom-modeline-buffer-encoding t)
   (setq doom-modeline-indent-info t)
   )
+
+;; Store custom-file separately, don't freak out when it's not found.
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file 'noerror)
