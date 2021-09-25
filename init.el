@@ -73,6 +73,10 @@
 (global-set-key (kbd "s-,") 'my-pop-local-mark-ring)
 (global-set-key (kbd "s-.") 'unpop-to-mark-command)
 
+;; Same keys with Shift will move you back and forward between open buffers.
+(global-set-key (kbd "s-<") 'previous-buffer)
+(global-set-key (kbd "s->") 'next-buffer)
+
 ;; ============
 ;; TEXT EDITING
 
