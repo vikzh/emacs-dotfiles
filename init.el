@@ -85,7 +85,9 @@
 
 ;; Comment line or region.
 (global-set-key (kbd "s-/") 'comment-line)
-
+;; Kill line
+(global-set-key (kbd "s-<backspace>") 'kill-whole-line)
+(global-set-key (kbd "s-<delete>") 'kill-whole-line)
 
 ;; =================
 ;; WINDOW MANAGEMENT
