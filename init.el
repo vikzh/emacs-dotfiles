@@ -10,6 +10,12 @@
 ;; makes sure the contents of the buffer is refreshed automatically when the file is changed outside of Emacs
 (global-auto-revert-mode t)
 (load-theme 'tsdh-light)
+(when (member "menlo" (font-family-list))
+  (set-face-attribute 'default nil :font "Menlo 15"))
+(setq-default line-spacing 2)
+
+;; Highlight current line
+(global-hl-line-mode 1)
 
 ;; disable auto save and backups
 (setq auto-save-default nil)
