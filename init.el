@@ -24,6 +24,9 @@
 ;; Move file to trash instead of removing.
 (setq-default delete-by-moving-to-trash t)
 
+;; Show full path in the title bar.
+(setq-default frame-title-format "%b (%f)")
+
 ;; C - Control
 ;; Super - Command
 ;; Meta - Option
